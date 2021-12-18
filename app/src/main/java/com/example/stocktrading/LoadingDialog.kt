@@ -1,9 +1,8 @@
 package com.example.stocktrading
 
-import android.app.Activity
 import android.app.AlertDialog
 
-class LoadingDialog(val mActivity: Activity) {
+class LoadingDialog(val mActivity: LoginActivity) {
     private lateinit var isdialog: AlertDialog
     fun startLoading(){
         val infalter=mActivity.layoutInflater

@@ -41,15 +41,17 @@ class DrawnActivity : AppCompatActivity() {
         var myStockjIntent=Intent(this@DrawnActivity,MyStocksActivity::class.java)
         var otherUserIntent=Intent(this@DrawnActivity,otherUserActivity::class.java)
         val navview=findViewById<NavigationView>(R.id.navView)
-        val drawerlay=findViewById<DrawerLayout>(R.id.drawerLayout)
         val drawerEmailId = navview.getHeaderView(0).findViewById<TextView>(R.id.emailDrawerText)
         sharedPreference = SharedPreferenceManager(this)
         drawerEmailId.text = "${sharedPreference.fetchEmail()}"
+        val drawerLayout=findViewById<DrawerLayout>(R.id.drawerLayout)
 
+       val mytoolbar=findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        toggle= ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
 
-        toggle= ActionBarDrawerToggle(this,drawerlay,toolbar,R.string.open,R.string.close)
-
-        drawerlay.addDrawerListener(toggle)
+        drawerLayout.addDrawerListener(toggle)
+        supportActionBar?.hide()
+        setSupportActionBar(mytoolbar)
         toggle.syncState()
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -85,7 +87,7 @@ class DrawnActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 withContext(Dispatchers.Main) {
-                    val recycle = findViewById<RecyclerView>(R.id.recycle)
+                    val recycle = findViewById<RecyclerView>(R.id.recycleView1)
                     recycle.adapter = AdapterClass(items,this@DrawnActivity)
                     recycle.layoutManager = LinearLayoutManager(this@DrawnActivity)
                 }
@@ -94,8 +96,7 @@ class DrawnActivity : AppCompatActivity() {
         } else {
             startActivity(intent)
         }
-        supportActionBar?.hide()
-        setSupportActionBar(toolbar)
+
 
 
     }

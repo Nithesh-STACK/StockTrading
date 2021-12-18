@@ -3,6 +3,7 @@ package com.example.stocktrading
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 
 import android.widget.Button
 import android.widget.Toast
@@ -26,6 +27,7 @@ class registerActivity : AppCompatActivity() {
 
         val regButton = findViewById<Button>(R.id.RegisterBtn)
         regButton.setOnClickListener {
+
             val email = findViewById<TextInputLayout>(R.id.RegisterTextLayout).editText?.text
             val password = findViewById<TextInputLayout>(R.id.RegisterPassTextLayout).editText?.text
             val user=UserData(email.toString(),password.toString())
@@ -53,10 +55,12 @@ class registerActivity : AppCompatActivity() {
                         when {
                             response.code()==200 -> {
 
+
                                 Toast.makeText(this@registerActivity, "Registration success!", Toast.LENGTH_SHORT)
                                     .show()
                                 val intent = Intent(this@registerActivity,LoginActivity::class.java)
                                 startActivity(intent)
+
 
                             }
                             response.code()==500 -> {
