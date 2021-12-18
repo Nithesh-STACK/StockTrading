@@ -54,7 +54,7 @@ class AllStocksActivity : AppCompatActivity() {
         toggle.syncState()
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.splashscreenlogo)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.logoimg)
         navview.setNavigationItemSelectedListener{
             when(it.itemId)
             {

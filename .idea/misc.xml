@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/StockTrading/app/src/main/res/drawable/logo.xml" value="0.11666666666666667" />
         <entry key="..\:/StockTrading/app/src/main/res/drawable/side_nav_bar.xml" value="0.11666666666666667" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_confirm_stocks.xml" value="0.13768115942028986" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_delete_account.xml" value="0.13768115942028986" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/activity_drawermenu.xml" value="0.22" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/activity_drawn.xml" value="0.13333333333333333" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/activity_login.xml" value="0.16530797101449277" />
@@ -23,6 +25,7 @@
         <entry key="..\:/StockTrading/app/src/main/res/layout/logins.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/nav_header_drawn.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/navheader.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/otheruserslists.xml" value="0.13768115942028986" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/stock_orders.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/menu/activity_drawn_drawer.xml" value="0.15510204081632653" />
         <entry key="..\:/StockTrading/app/src/main/res/menu/drawn.xml" value="0.10555555555555556" />
