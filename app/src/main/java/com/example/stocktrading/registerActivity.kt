@@ -28,6 +28,14 @@ class registerActivity : AppCompatActivity() {
         val regButton = findViewById<Button>(R.id.RegisterBtn)
         regButton.setOnClickListener {
 
+            val loading = LoadingDialogs(this)
+            loading.startLoading()
+            val handler = Handler()
+            handler.postDelayed(object : Runnable {
+                override fun run() {
+                    loading.isDismiss()
+                }
+            }, 3000)
             val email = findViewById<TextInputLayout>(R.id.RegisterTextLayout).editText?.text
             val password = findViewById<TextInputLayout>(R.id.RegisterPassTextLayout).editText?.text
             val user=UserData(email.toString(),password.toString())

@@ -3,6 +3,7 @@ package com.example.stocktrading
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_change_email.*
@@ -22,6 +23,14 @@ class changeEmailActivity : AppCompatActivity() {
 
         val confirmButton=findViewById<Button>(R.id.confirmChangeButton)
         confirmButton.setOnClickListener{
+            val loading = changeEmailDialog(this)
+            loading.startLoading()
+            val handler = Handler()
+            handler.postDelayed(object : Runnable {
+                override fun run() {
+                    loading.isDismiss()
+                }
+            }, 3000)
             val user=EmailUpdate(email.toString())
             sharedPreference = SharedPreferenceManager(this)
             CoroutineScope(Dispatchers.IO).launch {

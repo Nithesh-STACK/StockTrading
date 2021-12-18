@@ -11,7 +11,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.stocktrading.databinding.ActivityDrawnBinding
 import kotlinx.android.synthetic.main.activity_drawermenu.*
 import kotlinx.android.synthetic.main.activity_drawn.*
 import kotlinx.coroutines.CoroutineScope
@@ -19,10 +18,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class DrawnActivity : AppCompatActivity() {
+class AllStocksActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityDrawnBinding
+//    private lateinit var binding: ActivityDrawnBinding
     private lateinit var sharedPreference: SharedPreferenceManager
     lateinit var toggle:ActionBarDrawerToggle
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -37,9 +36,9 @@ class DrawnActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_drawn)
-        var profileIntent=Intent(this@DrawnActivity,profileActivity::class.java)
-        var myStockjIntent=Intent(this@DrawnActivity,MyStocksActivity::class.java)
-        var otherUserIntent=Intent(this@DrawnActivity,otherUserActivity::class.java)
+        var profileIntent=Intent(this@AllStocksActivity,profileActivity::class.java)
+        var myStockjIntent=Intent(this@AllStocksActivity,MyStocksActivity::class.java)
+        var otherUserIntent=Intent(this@AllStocksActivity,otherUserActivity::class.java)
         val navview=findViewById<NavigationView>(R.id.navView)
         val drawerEmailId = navview.getHeaderView(0).findViewById<TextView>(R.id.emailDrawerText)
         sharedPreference = SharedPreferenceManager(this)
@@ -88,8 +87,8 @@ class DrawnActivity : AppCompatActivity() {
                 }
                 withContext(Dispatchers.Main) {
                     val recycle = findViewById<RecyclerView>(R.id.recycleView1)
-                    recycle.adapter = AdapterClass(items,this@DrawnActivity)
-                    recycle.layoutManager = LinearLayoutManager(this@DrawnActivity)
+                    recycle.adapter = AdapterClass(items,this@AllStocksActivity)
+                    recycle.layoutManager = LinearLayoutManager(this@AllStocksActivity)
                 }
 
             }

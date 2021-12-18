@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -24,7 +25,14 @@ class deleteAccountActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.deleteAccountEmail).text="${sharedPreference.fetchEmail()}"
 
         findViewById<Button>(R.id.accountDeleteButton).setOnClickListener{
-
+            val loading = deleteEmailDialog(this)
+            loading.startLoading()
+            val handler = Handler()
+            handler.postDelayed(object : Runnable {
+                override fun run() {
+                    loading.isDismiss()
+                }
+            }, 3000)
             CoroutineScope(Dispatchers.IO).launch {
                 val sampleApplication=application as StockApplication
                 val service=sampleApplication.delete

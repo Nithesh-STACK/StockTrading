@@ -2,6 +2,7 @@ package com.example.stocktrading
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -67,6 +68,14 @@ class ConfirmStocks : AppCompatActivity() {
             pricce.text="$ ${pp*count}"
         }
         create.setOnClickListener{
+            val loading = confirmStocksDialog(this)
+            loading.startLoading()
+            val handler = Handler()
+            handler.postDelayed(object : Runnable {
+                override fun run() {
+                    loading.isDismiss()
+                }
+            }, 3000)
          if(count>0){
             CoroutineScope(Dispatchers.IO).launch {
 

@@ -3,17 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_drawermenu.xml" value="0.1" />
-        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_drawn.xml" value="0.16802536231884058" />
+        <entry key="..\:/StockTrading/app/src/main/res/drawable/logo.xml" value="0.11666666666666667" />
+        <entry key="..\:/StockTrading/app/src/main/res/drawable/side_nav_bar.xml" value="0.11666666666666667" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_drawermenu.xml" value="0.22" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_drawn.xml" value="0.13333333333333333" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/activity_login.xml" value="0.16530797101449277" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/activity_login_history.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_my_orders.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_my_stock.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_my_stocks.xml" value="0.1598731884057971" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/activity_other_user.xml" value="0.1" />
-        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_profile.xml" value="0.22" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/activity_register.xml" value="0.17572463768115942" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_stock.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/activity_stocks_page.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/app_bar_drawn.xml" value="0.1598731884057971" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/items.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/loading_activity.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/logins.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/nav_header_drawn.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/layout/navheader.xml" value="0.1" />
+        <entry key="..\:/StockTrading/app/src/main/res/layout/stock_orders.xml" value="0.1" />
         <entry key="..\:/StockTrading/app/src/main/res/menu/activity_drawn_drawer.xml" value="0.15510204081632653" />
         <entry key="..\:/StockTrading/app/src/main/res/menu/drawn.xml" value="0.10555555555555556" />
         <entry key="..\:/StockTrading/app/src/main/res/menu/navmenu.xml" value="0.10555555555555556" />

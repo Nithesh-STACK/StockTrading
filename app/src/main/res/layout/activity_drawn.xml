@@ -6,7 +6,7 @@
    android:layout_height="match_parent"
    android:textAlignment="center"
    android:id="@+id/drawerLayout"
-   tools:context=".DrawnActivity">
+   tools:context=".AllStocksActivity">
 
 
 
@@ -16,8 +16,8 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="404dp"
-            android:layout_height="80dp"
+            android:layout_width="403dp"
+            android:layout_height="63dp"
             android:background="@color/white"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:title="All Stocks"
             app:titleMarginStart="120dp"
-            app:titleTextColor="#13D1BF" />
+            app:titleTextColor="#45818e" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleView1"

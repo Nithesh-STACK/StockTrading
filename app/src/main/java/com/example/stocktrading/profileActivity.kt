@@ -18,7 +18,7 @@ class profileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
-        val image=findViewById<ImageView>(R.id.profilePictureView)
+        val image=findViewById<ImageView>(R.id.imageView3)
         val profileEmail=findViewById<TextView>(R.id.profileEmailText)
         val emailEditButton=findViewById<Button>(R.id.emailEditButton)
         val membershipText=findViewById<TextView>(R.id.membershipText)

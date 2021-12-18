@@ -16,7 +16,7 @@
 
 "
         android:textAlignment="center"
-        android:textColor="#0BCADC"
+        android:textColor="#45818e"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

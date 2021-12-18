@@ -41,11 +41,19 @@ class LoginActivity : AppCompatActivity() {
             startActivity(regScreenIntent)
 
         }
-        val intent = Intent(this, DrawnActivity::class.java)
+        val intent = Intent(this, AllStocksActivity::class.java)
         val profileIntent=Intent(this,profileActivity::class.java)
         sharedPreferenceManager = SharedPreferenceManager(this,)
         loginButton.setOnClickListener {
 
+            val loading = LoadingDialog(this)
+            loading.startLoading()
+            val handler = Handler()
+            handler.postDelayed(object : Runnable {
+                override fun run() {
+                    loading.isDismiss()
+                }
+            }, 3000)
             val email = findViewById<TextInputLayout>(R.id.RegisterTextLayout).editText?.text
             val password = findViewById<TextInputLayout>(R.id.RegisterPassTextLayout).editText?.text
 
@@ -59,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<loginDataClass?>, response: Response<loginDataClass?>) {
                         if(response.isSuccessful)
                         {
-                            val intent = Intent(this@LoginActivity,DrawnActivity::class.java)
+                            val intent = Intent(this@LoginActivity,AllStocksActivity::class.java)
                             sharedPreferenceManager.saveAuthToken(response.body()?.token)
                             sharedPreferenceManager.saveEmail(response.body()?.email)
                             sharedPreferenceManager.saveMember(response.body()!!.memberSince)

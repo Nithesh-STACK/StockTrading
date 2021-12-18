@@ -14,7 +14,7 @@ class MyStocksActivity : AppCompatActivity() {
             lateinit var sharedPreference:SharedPreferenceManager
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
-                setContentView(R.layout.activity_my_orders)
+                setContentView(R.layout.activity_my_stocks)
                 var apiclient=application as StockApplication
                 sharedPreference= SharedPreferenceManager(this)
                 var stocks:MutableList<StockData> = mutableListOf<StockData>()

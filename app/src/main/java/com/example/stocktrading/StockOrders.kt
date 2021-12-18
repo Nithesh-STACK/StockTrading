@@ -45,8 +45,8 @@ class StockOrders : AppCompatActivity() {
             withContext(Dispatchers.Main){
                 Picasso.get().load(res2?.url).into(img);
                 name.text=res2?.name
-                description.text=res2?.description
-                price.text="${res2?.price}"
+                description.text="   ${res2?.description}"
+                price.text="$ ${res2?.price}"
             }
         }
         create.setOnClickListener{

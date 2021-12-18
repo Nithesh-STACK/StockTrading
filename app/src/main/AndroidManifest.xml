@@ -32,7 +32,7 @@
             android:name=".profileActivity"
             android:exported="false" />
         <activity
-            android:name=".DrawnActivity"
+            android:name=".AllStocksActivity"
             android:exported="false"
             android:label="@string/title_activity_drawn"
             android:theme="@style/Theme.StockTrading.NoActionBar" />
