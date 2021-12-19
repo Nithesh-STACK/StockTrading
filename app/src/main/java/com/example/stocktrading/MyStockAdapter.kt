@@ -40,7 +40,7 @@ class MyStockAdapter(var items:MutableList<StockData>, var context: Context, var
         Picasso.get().load(items[position]!!.url).into(holder.img)
         holder.names.text = items[position].name
         holder.price.text =
-            "Total Cost $ ${items[position].price!!.toInt() * items[position]!!.price}"
+            "Total Cost $ ${items[position].price!!.toInt() + items[position]!!.price}"
         holder.countt.text = "${items[position].count} Stocks"
         holder.btn.setOnClickListener{
             sharedPreferenceManager = SharedPreferenceManager(context)
