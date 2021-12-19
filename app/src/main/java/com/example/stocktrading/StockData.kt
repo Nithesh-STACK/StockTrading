@@ -5,7 +5,8 @@ data class StockData(
     val url: String = "",
     val name: String = "",
     val price: Int = 0,
-    val description: String = "",
-    val owningId:Int?=0,
+    val description: String="",
+    val owningId:Int=0,
+    val count:Int=0,
 
     )

@@ -28,7 +28,7 @@ class MyStocksActivity : AppCompatActivity() {
                             var j=0
                             while(j<res.body()!!.stocks!!.size){
                                 if(result.body()!!.stockOwnings!![i].stockId==res.body()!!.stocks!![j].id)
-                                    stocks.add(StockData(res.body()!!.stocks!![j].id,res.body()!!.stocks!![j].url,res.body()!!.stocks!![j].name,res.body()!!.stocks!![j].price))
+                                    stocks.add(StockData(res.body()!!.stocks!![j].id,res.body()!!.stocks!![j].url,res.body()!!.stocks!![j].name,res.body()!!.stocks!![j].price,res.body()!!.stocks!![j].description,result.body()!!.stockOwnings!![i].owningId,result.body()!!.stockOwnings!![i].count))
 
                                 j+=1
 

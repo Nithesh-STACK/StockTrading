@@ -33,11 +33,11 @@ class ConfirmStocks : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             val result=apiClient.stockService.GetStocks("Bearer "+token)
             var i=0
-            var res2:StockData?=null
+            var val1:StockData?=null
             if(result.isSuccessful){
                 while(i<result.body()?.stocks!!.size){
                     if(result.body()?.stocks!![i].id==text){
-                        res2=result.body()?.stocks!![i]
+                        val1=result.body()?.stocks!![i]
                         break
                     }
                     i+=1
@@ -47,8 +47,8 @@ class ConfirmStocks : AppCompatActivity() {
 
             }
             withContext(Dispatchers.Main){
-                Picasso.get().load(res2?.url).into(img)
-                prices=res2?.price?.toInt()
+                Picasso.get().load(val1?.url).into(img)
+                prices=val1?.price?.toInt()
             }
         }
         add.setOnClickListener{

@@ -1,5 +1,6 @@
 package com.example.stocktrading
 
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
@@ -51,9 +52,8 @@ interface DeleteApiService {
     @Headers("Content-Type: application/json")
     @DELETE("priceapp-secure-backend/users/me")
     fun deleteUser(@Header("Authorization") token: String): Call<Void>
-    @DELETE("/priceapp-secure-backend/users/me/ownings/{owningId}")
-    suspend fun DeleteStocks(@Header("Authorization") token: String,@Path("owningId")
-    owningId:Int):Response<Unit>
+    @DELETE("priceapp-secure-backend/users/me/ownings/{owningId}")
+    fun DeleteStocks(@Header("Authorization") token: String,@Path("owningId")owningId:Int):Call<Void>
 
 }
 interface  MyStocksApiService{
