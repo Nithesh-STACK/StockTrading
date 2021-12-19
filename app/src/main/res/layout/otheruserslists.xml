@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
 
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="58dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="35dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/otheruserEmail" />
@@ -32,7 +32,7 @@
         android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="58dp"
         android:background="#45818e"
         android:backgroundTint="#45818e"
         android:drawable="@drawable/logo"
